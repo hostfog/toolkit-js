@@ -1,0 +1,18 @@
+{
+  "subject": "test.hostfog.dev",
+  "issuer": "test.hostfog.dev",
+  "sans": [
+    "test.hostfog.dev",
+    "*.hostfog.dev"
+  ],
+  "validFrom": "2026-10-16T08:10:53Z",
+  "validTo": "2036-10-13T08:10:53Z",
+  "serialNumber": "1A2B3C4D",
+  "coversHost": {
+    "test.hostfog.dev": true,
+    "a.hostfog.dev": true,
+    "hostfog.dev": false,
+    "a.b.hostfog.dev": false,
+    "example.com": false
+  }
+}

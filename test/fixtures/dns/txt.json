@@ -1,0 +1,1 @@
+{"Status":0,"Question":[{"name":"example.com","type":16}],"Answer":[{"name":"example.com.","type":16,"TTL":3600,"data":"\"v=spf1 include:_spf.hostfog.io -all\""},{"name":"example.com.","type":16,"TTL":3600,"data":"\"google-site-verification=abc\" \"def123\""}]}

@@ -1,0 +1,38 @@
+{
+  "a_with_cname": {
+    "query": ["www.example.com", "A"],
+    "records": [
+      {"type": "A", "name": "example.com", "value": "93.184.216.34", "ttl": 300, "priority": null},
+      {"type": "A", "name": "example.com", "value": "93.184.216.35", "ttl": 300, "priority": null}
+    ]
+  },
+  "mx": {
+    "query": ["example.com", "MX"],
+    "records": [
+      {"type": "MX", "name": "example.com", "value": "mail.example.com", "ttl": 300, "priority": 10},
+      {"type": "MX", "name": "example.com", "value": "backup-mail.example.com", "ttl": 300, "priority": 20}
+    ]
+  },
+  "txt": {
+    "query": ["example.com", "TXT"],
+    "records": [
+      {"type": "TXT", "name": "example.com", "value": "v=spf1 include:_spf.hostfog.io -all", "ttl": 3600, "priority": null},
+      {"type": "TXT", "name": "example.com", "value": "google-site-verification=abcdef123", "ttl": 3600, "priority": null}
+    ]
+  },
+  "nxdomain": {
+    "query": ["nope.example.com", "A"],
+    "records": []
+  },
+  "no_answer": {
+    "query": ["example.com", "AAAA"],
+    "records": []
+  },
+  "servfail": {
+    "query": ["broken.example.com", "A"],
+    "error": "DnsError"
+  },
+  "request_url_cloudflare": "https://cloudflare-dns.com/dns-query?name=www.example.com&type=A",
+  "request_url_google": "https://dns.google/resolve?name=www.example.com&type=A",
+  "request_header": ["Accept", "application/dns-json"]
+}

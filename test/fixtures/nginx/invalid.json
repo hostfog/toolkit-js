@@ -1,0 +1,6 @@
+{
+  "no_server_names": {"root": "/var/www"},
+  "no_root_or_proxy": {"serverNames": ["example.com"]},
+  "proxy_and_php": {"serverNames": ["example.com"], "proxyPass": "http://127.0.0.1:3000", "php": "/run/php.sock"},
+  "injection": {"serverNames": ["example.com"], "root": "/var/www; include /etc/passwd"}
+}

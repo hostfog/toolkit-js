@@ -1,0 +1,92 @@
+{
+  "name": "@hostfog/toolkit",
+  "version": "0.1.0",
+  "description": "Zero-dependency toolkit for web developers and server admins: domain validation, DNS-over-HTTPS, SSL checks, nginx config builder, health checks and utilities.",
+  "keywords": [
+    "hostfog",
+    "hosting",
+    "domain",
+    "idn",
+    "punycode",
+    "dns",
+    "dns-over-https",
+    "doh",
+    "ssl",
+    "tls",
+    "certificate",
+    "nginx",
+    "health-check",
+    "uptime",
+    "devops"
+  ],
+  "homepage": "https://hostfog.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hostfog/toolkit-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hostfog/toolkit-js/issues"
+  },
+  "license": "MIT",
+  "author": "HostFog <dev@hostfog.io>",
+  "type": "module",
+  "main": "./src/index.js",
+  "types": "./types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "default": "./src/index.js"
+    },
+    "./domain": {
+      "types": "./types/domain.d.ts",
+      "default": "./src/domain.js"
+    },
+    "./dns": {
+      "types": "./types/dns.d.ts",
+      "default": "./src/dns.js"
+    },
+    "./ssl": {
+      "types": "./types/ssl.d.ts",
+      "default": "./src/ssl.js"
+    },
+    "./nginx": {
+      "types": "./types/nginx.d.ts",
+      "default": "./src/nginx.js"
+    },
+    "./health": {
+      "types": "./types/health.d.ts",
+      "default": "./src/health.js"
+    },
+    "./util": {
+      "types": "./types/util.d.ts",
+      "default": "./src/util.js"
+    },
+    "./errors": {
+      "types": "./types/errors.d.ts",
+      "default": "./src/errors.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "types",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "typecheck": "tsc --noEmit -p test/tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.4.0"
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  }
+}

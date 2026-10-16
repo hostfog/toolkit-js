@@ -1,0 +1,6 @@
+{
+  "serverNames": ["app.example.io"],
+  "proxyPass": "http://127.0.0.1:3000",
+  "ssl": ["/etc/ssl/app/fullchain.pem", "/etc/ssl/app/privkey.pem"],
+  "redirectHttps": false
+}

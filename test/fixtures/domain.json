@@ -1,0 +1,40 @@
+{
+  "normalize": [
+    ["example.com", "example.com"],
+    ["  Example.COM  ", "example.com"],
+    ["https://www.example.com/path?q=1#top", "www.example.com"],
+    ["http://user:pass@shop.example.co.uk:8080/", "shop.example.co.uk"],
+    ["example.com.", "example.com"],
+    ["bücher.de", "xn--bcher-kva.de"],
+    ["https://Bücher.de/", "xn--bcher-kva.de"]
+  ],
+  "normalize_invalid": [
+    "",
+    "localhost",
+    "-bad.com",
+    "bad-.com",
+    "exa mple.com",
+    "example.123",
+    "https://",
+    "a..b.com"
+  ],
+  "is_valid": [
+    ["example.com", true],
+    ["sub.example.co.uk", true],
+    ["xn--bcher-kva.de", true],
+    ["EXAMPLE.COM", true],
+    ["a-b.c-d.io", true],
+    ["localhost", false],
+    ["-bad.com", false],
+    ["bad-.com", false],
+    ["example.123", false],
+    ["exa_mple.com", false],
+    ["https://example.com", false],
+    ["a..b.com", false],
+    ["", false]
+  ],
+  "is_valid_long": {
+    "label_64_chars_invalid": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.com",
+    "label_63_chars_valid": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.com"
+  }
+}

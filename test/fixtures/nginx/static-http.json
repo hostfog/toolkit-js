@@ -1,0 +1,4 @@
+{
+  "serverNames": ["static.example.org"],
+  "root": "/var/www/static"
+}

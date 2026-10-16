@@ -1,0 +1,8 @@
+{
+  "serverNames": ["Example.com", "www.example.com"],
+  "root": "/home/example/public_html",
+  "php": "/run/php/php8.3-fpm.sock",
+  "ssl": ["/etc/ssl/example.com/fullchain.pem", "/etc/ssl/example.com/privkey.pem"],
+  "gzip": true,
+  "clientMaxBodySize": "64M"
+}
